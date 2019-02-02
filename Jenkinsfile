@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('hello world') {
       steps {
-        sh 'echo "hello world"'
+        node('macos') {
+          sh 'echo "macos hello world"'
+        }
+        node('linux') {
+          sh 'echo "macos hello world"'
+        }
       }
     }
   }
